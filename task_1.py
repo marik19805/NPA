@@ -11,6 +11,11 @@ class Detector:
         self.pmt_coords = self._generate_pmt_positions()
 
     def _generate_pmt_positions(self):
+        """
+        Равномерно распределяет N точек по сфере радиуса R
+        методом спирали Фибоначчи.
+        Возвращает numpy.ndarray размерности (N, 3).
+        """
         indices = np.arange(0, self.N, dtype=float) + 0.5
         z = self.R - 2 * self.R * indices / self.N
         rho = np.sqrt(self.R**2 - z**2)
@@ -22,14 +27,22 @@ class Detector:
         return coords
 
     def get_pmt_index(self, point: np.ndarray) -> int:
+        """
+        Определяет, принадлежит ли точка на поверхности детектора какому-либо ФЭУ.
+        :param point: координаты точки (x, y, z) - список или numpy массив
+        :return: индекс ФЭУ (от 0 до N-1), если точка попала в него, иначе -1
+        """
         point = np.asarray(point, dtype=float)
-        distances = np.linalg.norm(self.pmt_coords - point, axis=1)
+        distances = np.linalg.norm(self.pmt_coords - point, axis=1) #считает корень из суммы квадратов разностей координат по оси 1
         min_idx = int(np.argmin(distances))
         if distances[min_idx] <= self.r:
             return min_idx
         return -1
 
     def is_in_pmt(self, point: np.ndarray) -> bool:
+        """
+        Возвращает True, если точка принадлежит хотя бы одному ФЭУ, иначе False.
+        """
         return self.get_pmt_index(point) != -1
 
 
