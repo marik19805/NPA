@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec836a72-2be7-486b-9777-2efe91d3f83b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_3.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +44,7 @@
     "Python.task_3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/hutat/PycharmProjects/homework",
+    "last_opened_file_path": "C:/Users/hutat/PycharmProjects/physmod",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
